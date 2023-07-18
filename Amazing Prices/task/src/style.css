@@ -2,13 +2,19 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100vw;
     margin: 0;
+}
+
+.banner,
+main,
+body {
+    width: 100%;
+    max-width: 1024px;
 }
 
 body {
     font-family: 'Inter', sans-serif;
-    width: 1024px;
+    width: 100%;
     margin: 0;
 }
 
@@ -22,20 +28,19 @@ a {
     color: #274867;
 }
 
-#nav-brand, #footer-brand {
+#nav-brand,
+#footer-brand {
     font-weight: 700;
 }
 
 .banner {
     display: flex;
     align-items: center;
-    width: 1024px;
     height: 61px;
     padding: 0 21px 0 21px;
     background: #FFFFFF;
     box-sizing: border-box;
     border-bottom: 1px solid rgba(1, 124, 255, 0.5);
-
 }
 
 header {
@@ -44,7 +49,7 @@ header {
 
 nav {
     display: flex;
-    width: 357px;
+    width: 360px;
     justify-content: space-between;
 }
 
@@ -52,15 +57,30 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 1024px;
     padding: 15px 0 45px 0;
     background-color: #E5F2FF;
+}
+
+#title-section,
+#table-section {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    width: 459px;
+}
+
+#title-section {
+    margin-top: 20px;
 }
 
 #cards {
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-around;
+    width: 80%;
+    max-width: 700px;
     margin: 10px 0 10px 0;
 }
 
@@ -73,7 +93,7 @@ main {
     border-radius: 10px;
     width: 200px;
     height: 300px;
-    margin: 0 30px 0 30px;
+    margin: 25px 5px 25px 5px;
     text-align: center;
     background-color: #B9B9B9;
 }
@@ -92,6 +112,7 @@ h1 {
 table,
 td,
 th {
+    padding: 3px;
     border: black 1px solid;
 }
 
@@ -111,4 +132,36 @@ table {
 footer {
     justify-content: space-between;
     border-top: 1px solid rgba(1, 124, 255, 0.5);
+}
+
+@media screen and (max-width: 700px) {
+
+    .banner,
+    main,
+    body {
+        width: 425px;
+    }
+
+    footer.banner {
+        height: 239px;
+    }
+
+    footer.banner,
+    header {
+        justify-content: space-around;
+    }
+
+    .banner,
+    #cards {
+        flex-direction: column;
+    }
+
+    #title-section,
+    table {
+        width: 60%;
+    }
+
+    p {
+        display: flex;
+    }
 }
